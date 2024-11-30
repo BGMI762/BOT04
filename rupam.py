@@ -5,7 +5,7 @@ import datetime
 import os
 
     
-bot = telebot.TeleBot('6978866468:AAGLcR0qILP7EXlM6v90lQUkbdGRgkv2y2I')
+bot = telebot.TeleBot('7424367530:AAE04iTLqsVrtub3ZFkeNxvgquTM7lith8Y')
 admin_id = ["6804992562"]
 
 
@@ -389,7 +389,7 @@ def handle_bgmi(message):
             if user_id in bgmi_cooldown:
                 elapsed_time = (current_time - bgmi_cooldown[user_id]).total_seconds()
                 print(f"User {user_id} last used command {elapsed_time} seconds ago.")  # Debug message
-                if elapsed_time < 280:  # Cooldown set to 280 seconds
+                if elapsed_time < 0:  # Cooldown set to 280 seconds
                     response = "⏰ 𝗖𝗢𝗢𝗟𝗗𝗢𝗪𝗡 ⏰ 𝗣𝗟𝗘𝗔𝗦𝗘 𝗪𝗔𝗜𝗧 𝗕𝗘𝗙𝗢𝗥𝗘 𝗦𝗘𝗡𝗗𝗜𝗡𝗚 𝗔𝗡𝗢𝗧𝗛𝗘𝗥 𝗔𝗧𝗧𝗔𝗖𝗞"
                     bot.reply_to(message, response)
                     return
